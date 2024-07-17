@@ -5,7 +5,11 @@
 	"license": "MIT",
 	"dependencies": {
 		"@aptos-labs/aptos-faucet-client": "^0.2.0",
-		"@aptos-labs/ts-sdk": "^1.21.0"
+		"@aptos-labs/ts-sdk": "^1.22.2",
+		"axios": "^1.7.2",
+		"ethers": "^6.13.1",
+		"graphql": "^16.9.0",
+		"graphql-request": "^7.1.0"
 	},
 	"devDependencies": {
 		"@types/node": "^20.14.7",

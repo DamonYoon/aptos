@@ -1,11 +1,11 @@
 import { Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk";
 
 const aptosConfig = new AptosConfig({
-	network: Network.DEVNET,
+	network: Network.TESTNET,
 });
 
 const aptos = new Aptos(aptosConfig);
-const ACCOUNT_ADDRESS = "0x3736adcf922eadb6069d481129f471a3ee27699df1fa2e31811b0663873ca253";
+const ACCOUNT_ADDRESS = "0x3a8e4a6d4e3d38329012d48f1703b62314070285ee85c06e5a1e29fcce7d8cab";
 
 async function faucet() {
 	const fund = await aptos.fundAccount({
@@ -16,7 +16,10 @@ async function faucet() {
 	console.log("Faucet complete");
 }
 
-faucet();
+let iteration = 1;
+for (let i = 0; i < iteration; i++) {
+	faucet();
+}
 
 // import { AptosFaucetClient, FundRequest } from "@aptos-labs/aptos-faucet-client";
 
